@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>Trivia Page</title>
+	</head>
+	<style>
+	body{
+		background-color: lightblue;
+		background-image: url("Gus.png");
+		background-position: right top;
+		background-repeat: no-repeat;
+	}
+	span{
+		font-size: 300%;
+		position: absolute;
+		left: 850px;
+		top: 130px;
+	}
+	</style>
+	<body>
+		<select id = "drop">
+			<option value="Test 1" id="Test 1">Test 1</option>
+			<option value="Test 2" id="Test 2" selected="selected">Test 2</option>
+			<option value="Test 3" id="Test 3">Test 3</option>
+			<option value="Test 4" id="Test 4">Test 4</option>
+			<option value="Test 5" id="Test 5">Test 5</option>
+			<option value="Test 6" id="Test 6">Test 6</option>
+		</select>
+		<button type="button" id ="load" onclick="loadTest(0)" >Load Test</button>
+		<button type="button" id ="random" onclick="loadRandom()" >Random Test</button>
+		Choose Random Test Length: <select id ="selectLength">
+			<option value="10" id="10" selected="selected">10</option>
+			<option value="20" id="20">20</option>
+			<option value="30" id="30">30</option>
+			<option value="40" id="40">40</option>
+			<option value="50" id="50">50</option>
+		</select>
+		Test Type: <select id="testType">
+			<option value="standard" id="standard">Standard</option>
+			<option value="random" id="ranTest">Random</option>
+		</select>
+		 Choose Difficulty: <select id ="selectDifficulty">
+			<option value="all" id="all">All</option>
+			<option value="easy" id="all">Easy</option>
+			<option value="medium" id="medium">Medium</option>
+			<option value="hard" id="hard">Hard</option>
+		</select>
+		<button type="button" id="filter" onclick="setDifficulty()">Filter Difficulty</button>
+
+	<div id ="scoreArea">
+	</div>
+	<div id ="testArea">
+	</div>
+	<script src="trivia.js"></script>
+	</body>
+</html>
