@@ -1,0 +1,14 @@
+doctype html
+html
+	head
+		title= quiz.creator+"'s Quiz"
+	body
+		h2= quiz.creator+"'s Quiz"
+		p= "Quiz Creator: "+quiz.creator
+		p= "Quiz Tags: "+quiz.tags
+		p= "Quiz ID: "+quiz._id
+		h4 Questions:
+		div
+			each question in quiz.questions
+				a(href="http://localhost:3000/questions/"+question._id)=question.question.replace(/&quot;/g,'"').replace(/&#039;/g,"'")
+				br

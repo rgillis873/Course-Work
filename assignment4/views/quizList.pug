@@ -1,0 +1,9 @@
+doctype html
+html
+	head
+		title Quiz Search Results
+	body
+		div
+			each quizOption in quiz
+				a(href="http://localhost:3000/quiz/"+quizOption._id)=quizOption.creator+" | "+quizOption.tags
+				br

@@ -1,0 +1,13 @@
+doctype html
+html
+	head
+		title=questions.replace(/&quot;/g,'"').replace(/&#039;/g,"'").replace(/&amp;/g,"&")
+	body
+		p= "Question ID: "+id 
+		p= "Question: "+questions.replace(/&quot;/g,'"').replace(/&#039;/g,"'").replace(/&amp;/g,"&")
+		p= "Category: "+category
+		p= "Difficulty: "+difficulty
+		p= "Correct Answer: "+correct.replace(/&quot;/g,'"').replace(/&#039;/g,"'").replace(/&amp;/g,"&")
+		p= "Incorrect Answers: "+incorrect
+		
+		

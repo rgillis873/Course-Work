@@ -1,0 +1,29 @@
+doctype html
+html
+	head
+		title Trivia Quiz Creator
+	body(onload="updateLinks()")
+		script(type='text/javascript',src="/quizCreation.js")
+		h1 Trivia Quiz Creator
+		p Creator Name:
+			input#name(type="textbox")
+		p Quiz Tags:
+			input#tag(type="textbox")
+		h3 Current Quiz Questions:
+		
+		div#thelist
+			p#empty Quiz is empty
+		
+		br
+		button(onclick="saveQuiz()") Save Quiz
+		
+		h2 Search/Add Questions
+		p Category
+			select#category(onchange="updateLinks()")
+				each choice in category
+					option(value=choice)=choice
+		p Difficulty
+			select#difficulty(onchange="updateLinks()")
+				each level in difficulty
+					option(value=level)=level
+		div#search 
