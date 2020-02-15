@@ -1,0 +1,9 @@
+html
+	head
+		title User List
+		include ./header.pug
+	body
+		br
+		for individual in users
+			a(href="http://localhost:3000/users/"+individual._id)=individual.username
+			br

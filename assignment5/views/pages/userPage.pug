@@ -1,0 +1,28 @@
+html
+	head
+		title User Page
+		include ./header.pug
+	body
+		script(src="/js/userPage.js")
+		if loggedin && currentUser
+			h2= individual.username+"'s Profile Page" 
+			p= "Total Quizzes: "+individual.total_quizzes
+			p= "Average Quiz Score: "+score
+			if(individual.privacy == true)
+				select#privacySetting()
+					option(value="on" selected)="On"
+					option(value="off")="Off"
+				|	
+			else
+				select#privacySetting()
+					option(value="on")="On"
+					option(value="off" selected)="Off"
+				|	
+			button(onclick="updatePrivacy()" ) Save Privacy Change
+			|
+			|
+			button(onclick="logOut(this.value)" value=user.username) Log Out
+		else
+			h2= individual.username+"'s Profile Page"
+			p= "Total Quizzes: "+individual.total_quizzes
+			p= "Average Quiz Score: "+score
