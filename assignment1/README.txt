@@ -1,5 +1,4 @@
 Student Name: Robert Gillis
-Student Number: 100900973
 
 Source files: trivia.js
 			  trivia.html
