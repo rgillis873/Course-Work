@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<Title>Stats Page</Title>
+	</head>
+	<h1>Trivia Game Stats</h1>
+	<style>
+	#player {
+		position: absolute;
+		left: 30px;
+		top: 150px;
+	}
+	#games {
+		position: absolute;
+		left: 150px;
+		top: 150px;
+	}
+	#wins {
+		position: absolute;
+		left: 280px;
+		top: 150px;
+	}
+	#losses {
+		position: absolute;
+		left: 350px;
+		top: 150px;
+	}
+	#totalpoints {
+		position: absolute;
+		left: 430px;
+		top: 150px;
+	}
+	#averagepoints {
+		position: absolute;
+		left: 550px;
+		top: 150px;
+	}
+	#winpctg {
+		position: absolute;
+		left: 750px;
+		top: 150px;
+	}
+	#sortwins{
+		position: absolute;
+		left: 30px;
+		top: 110px;
+	}
+	
+	#sortpoints{
+		position: absolute;
+		left: 130px;
+		top: 110px;
+	}
+	
+	
+	</style>
+	<script src="statsPage.js" > </script>
+	<body onload="init()">
+		<input type="button" id="sortwins" value="Sort By Wins" onclick="sortWins()">
+		<input type="button" id="sortpoints" value="Sort By Total Points" onclick="sortPoints()">
+		<div id="player">Player Name</div>
+		<div id="games">Games Played</div>
+		<div id="wins">Wins</div>
+		<div id="losses">Losses</div>
+		<div id="totalpoints">Total Points</div>
+		<div id="averagepoints">Average Points Per Game</div>
+		<div id="winpctg">Win Percentage</div>
+	</body>
+	<script src="/socket.io/socket.io.js" ></script>
+</html>

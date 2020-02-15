@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<Title>Join Page</Title>
+	</head>
+		<h1>Enter Your Name to Join the Game</h1>
+	<style>
+	h1{
+		position: absolute;
+		left: 450px;
+		top: 10px
+	}
+	#playerName {
+		position: absolute;
+		left:620px;
+		top: 100px;
+	
+	}
+	#join{
+		position: absolute;
+		left:520px;
+		top: 100px;
+	}
+	
+	#nameSpot{
+		position: absolute;
+		left: 520px;
+		top: 170px;
+		height: 200px;
+		width: 300px;
+		border-style: solid;
+	
+	}
+	#current{
+		position: absolute;
+		left:575px;
+		top: 150px;
+		font-size: 20px;
+	}
+	
+	</style>
+	<body onload="start()">
+		<form>
+			<input type="text" name="playerName" id = "playerName">
+		</form>
+		<input type="button" value="Join Game" onclick="newPlayer()" id="join"><br><br>
+		<div id="nameSpot"></div>
+		<div id="questionArea"></div>
+		<div id="chatArea"></div>
+		<div id="current">Current Names In Use</div>
+		
+	</body>
+	<script src="loadJoin.js" > </script>
+	<script src="/socket.io/socket.io.js" ></script>
+</html>

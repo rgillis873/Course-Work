@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<Title>Admin Page</Title>
+	</head>
+	<h1>Admin Page</h1>
+	<style>
+	h1{
+		position: absolute;
+		top: 1px;
+		left: 600px;
+	}
+	
+	#booted{
+		position: absolute;
+		right: 400px;
+		top:100px;
+	}
+	#nameSpot{
+		position: absolute;
+		left: 50px;
+		top: 75px;
+		width: 400px;
+		height: 150px;
+		border-style: solid;
+		overflow-y: scroll;
+	}
+	#nextquestion{
+		position: absolute;
+		left: 50px;
+		top: 235px;
+	}
+	#restartGame{
+		position: absolute;
+		left: 160px;
+		top: 235px;
+	}
+	#kickplayer{
+		position: absolute;
+		left: 265px;
+		top: 235px;
+	
+	}
+	#playerToKick{
+		position: absolute;
+		left: 350px;
+		top: 235px;
+	
+	}
+	#current{
+		position: absolute;
+		top: 45px;
+		left: 50px;
+		font-size: 20px;
+	
+	}
+	
+	
+	</style>
+	<body onload="init()">
+		<div id="current">Current Players</div>
+		<div id="nameSpot"></div>
+		<input type="button" id="nextquestion" value="Next Question" onclick="skipQuestion()">
+		<input type="button" id="restartGame" value="Restart Game" onclick="restartGame()">
+		<input type="button" id="kickplayer" value="Kick Player" onclick="kickPlayer()">
+		<input type="text" id="playerToKick">
+		<div id="booted"></div>
+	</body>
+	<script src="admin.js" > </script>
+	<script src="/socket.io/socket.io.js" ></script>
+</html>
