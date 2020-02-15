@@ -1,5 +1,4 @@
 Name: Robert Gillis
-Student Number: 100900973
 
 Source files: admin.html
 			  admin.js
